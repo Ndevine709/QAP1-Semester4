@@ -1,9 +1,12 @@
 package com.noahd.banking;
 
+/**
+ * Represents a person with a first name, last name, and home address.
+ */
 public class Person {
-    private String lastName;
-    private String firstName;
-    private Address home;
+    private final String lastName;
+    private final String firstName;
+    private final Address home;
 
     public Person (String lastName, String firstName, Address home) {
         this.lastName = lastName;
@@ -24,6 +27,6 @@ public class Person {
     }
 
     public String toString () {
-        return (this.firstName + " " + this.lastName + ", " + this.home);
+        return (firstName + " " + lastName + ", " + home);
     }
 }
