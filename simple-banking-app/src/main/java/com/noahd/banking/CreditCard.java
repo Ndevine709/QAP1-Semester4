@@ -1,7 +1,10 @@
 package com.noahd.banking;
 
+/**
+ * Represents a credit card with a balance, credit limit, and an owner.
+ * Allows charging and making payments while enforcing the credit limit.
+ */
 public class CreditCard {
-
     private Money balance;
     private Money creditLimit;
     private Person owner;
@@ -20,11 +23,17 @@ public class CreditCard {
         return new Money(creditLimit);
     }
 
-    public String getPersonals () {
+    public String getOwnerDetails () {
         return owner.toString();
     }
 
-    public void charge(Money amount) {
+    /**
+     * Attempts to charge the specified amount to the card.
+     * If the charge exceeds the credit limit, it is declined.
+     *
+     * @param amount the amount to charge
+     */
+    public void chargeToCard(Money amount) {
         if (balance.add(amount).compareTo(creditLimit) <= 0) {
             balance = balance.add(amount);
             System.out.println("Charge: " + amount);
@@ -33,7 +42,12 @@ public class CreditCard {
         }
     }
 
-    public void payment(Money amount) {
+    /**
+     * Applies a payment to reduce the card balance.
+     *
+     * @param amount the amount to pay
+     */
+    public void makePayment(Money amount) {
         balance = balance.subtract(amount);
         System.out.println("Payment: " + amount);
     }

@@ -16,26 +16,26 @@ public class CreditCardDemo
 
 
         CreditCard visa = new CreditCard(owner, LIMIT);
-        System.out.println(visa.getPersonals());
+        System.out.println(visa.getOwnerDetails());
 
         System.out.println("Balance: " + visa.getBalance());
         System.out.println("Credit Limit : " + visa.getCreditLimit());
         System.out.println();
 
         System.out.println("Attempt to charge " + FIRST_AMOUNT);
-        visa.charge(FIRST_AMOUNT);
+        visa.chargeToCard(FIRST_AMOUNT);
         System.out.println("Balance : " + visa.getBalance());
 
         System.out.println("Attempt to charge " + SECOND_AMOUNT);
-        visa.charge(SECOND_AMOUNT);
+        visa.chargeToCard(SECOND_AMOUNT);
         System.out.println("Balance : " + visa.getBalance());
 
         System.out.println("Attempt to pay " + THIRD_AMOUNT);
-        visa.payment(THIRD_AMOUNT);
+        visa.makePayment(THIRD_AMOUNT);
         System.out.println("Balance : " + visa.getBalance());
 
         System.out.println("Attempt to charge " + FOURTH_AMOUNT);
-        visa.charge(FOURTH_AMOUNT);
+        visa.chargeToCard(FOURTH_AMOUNT);
         System.out.println("Balance : " + visa.getBalance());
 
     }
