@@ -6,6 +6,14 @@ public class Address {
     private String state;
     private String zip;
 
+    /**
+     * Constructs an Address object with the specified street, city, state, and zip code.
+     *
+     * @param street the street address
+     * @param city   the city name
+     * @param state  the state abbreviation or name
+     * @param zip    the postal zip code
+     */
     public Address (String street, String city, String state, String zip) {
         this.street = street;
         this.city = city;
@@ -30,6 +38,6 @@ public class Address {
     }
 
     public String toString () {
-        return (this.street + ", " + this.city + ", " + this.state + " " + this.zip);
+        return (street + ", " + city + ", " + state + " " + zip);
     }
 }
