@@ -1,8 +1,9 @@
 package com.noahd.banking;
 
 /**
- * Represents a monetary amount in dollars and cents.
- * This class represents a fixed amount of money and lets you perform basic math and comparisons with it
+ * A class for handling money in dollars and cents
+ * This class allows you to add, subtract, and compare amounts without worrying about rounding issues
+ * Stores dollars and cents separately.
  */
 public class Money {
     private final long dollars;
